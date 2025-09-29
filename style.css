@@ -1,0 +1,16 @@
+* { box-sizing: border-box; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+body { background: #0f172a; color: #e6eef8; margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+main { width: 880px; max-width: 96vw; background: linear-gradient(180deg,#071032 0%, #0b1026 100%); padding: 1.6rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(2,6,23,0.7); }
+h1 { margin: 0 0 0.4rem 0; font-size: 1.6rem; }
+.descr { margin: 0 0 1rem 0; color: #9fb0d9; font-size: 0.95rem; }
+label { font-weight: 600; display:block; margin-bottom: 0.25rem; }
+input#expr, input#expr2 { width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color: inherit; font-size: 1rem; }
+.buttons { margin-top: 0.6rem; display:flex; gap:0.5rem; flex-wrap:wrap; }
+button { padding: 0.5rem 0.8rem; border-radius: 8px; border: none; cursor: pointer; background: #1e293b; color: #dbeafe; font-weight: 600; }
+button:hover { filter: brightness(1.08); }
+.output { display: grid; grid-template-columns: 1fr; gap: 0.8rem; margin-top: 1rem; }
+.output h2 { margin: 0; font-size: 1rem; color:#cfe5ff; }
+pre { background: rgba(0,0,0,0.4); padding: 0.8rem; border-radius: 8px; min-height: 2.2rem; overflow:auto; }
+.compareBox { margin-top: 1rem; }
+footer { margin-top: 1rem; color:#8ca3cf; font-size:0.8rem; }
+small { opacity: 0.9; }

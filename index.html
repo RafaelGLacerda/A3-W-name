@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="icone.jpg" type="image/jpg">
+  <title>Calculadora Científica de Números Complexos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Calculadora Científica — Números Complexos</h1>
+    <p class="descr">
+      <p class="descr">
+  Digite expressões com números complexos e variáveis. Exemplos prontos para testar:<br><br>
+
+  • <code>3+4i</code><br>
+  • <code>(3+4i) + (2-5i)</code><br>
+  • <code>(1+2i) * (3+4i)</code><br>
+  • <code>(1+2i) / (3+4i)</code><br>
+  • <code>conj(3+4i)</code><br>
+  • <code>(1+i)**2</code><br>
+  • <code>sqrt(3+4i)</code><br>
+  • <code>(x+1i) * conj(x)</code><br>
+  • <code>(a+b) / (a-b)</code><br>
+  • <code>(x+1)*(x-1)</code> &nbsp;vs.&nbsp; <code>x**2 - 1</code> (use “Comparar”)<br>
+</p>
+
+    </p>
+
+    <label for="expr">Expressão:</label>
+    <input id="expr" placeholder="ex: (3+4i) * conj(x) - sqrt(2+0i) ** 2" />
+
+    <div class="buttons">
+      <button id="parseBtn">Verificar & Construir Árvore</button>
+      <button id="runBtn">Executar</button>
+      <button id="compareBtn">Comparar com outra expressão</button>
+      <button id="clearBtn">Limpar</button>
+    </div>
+
+    <section class="output">
+      <h2>Árvore (notação LISP)</h2>
+      <pre id="astOut">(nenhuma)</pre>
+
+      <h2>Log / Erros</h2>
+      <pre id="logOut">(vazio)</pre>
+
+      <h2>Resultado</h2>
+      <pre id="resultOut">(nenhum)</pre>
+    </section>
+
+    <section class="compareBox" hidden>
+      <label for="expr2">Expressão 2 (para comparação):</label>
+      <input id="expr2" placeholder="segunda expressão..." />
+      <button id="doCompareBtn">Executar comparação</button>
+    </section>
+
+    <footer>
+      <small>Regras implementadas: representação a+bi, + - * / ** sqrt() conj(), parsing em árvore, verificação por avaliação numérica, detecção de erros (p.ex. divisão por zero), entrada de variáveis via prompts.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
